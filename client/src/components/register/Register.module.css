@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.heading {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
