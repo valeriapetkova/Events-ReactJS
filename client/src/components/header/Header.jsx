@@ -18,6 +18,7 @@ export default function Header() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/events">All events</Nav.Link>
             {isAuthenticated ? (
               <>
                 <Nav.Link as={Link} to="/events/create">Create event</Nav.Link>
