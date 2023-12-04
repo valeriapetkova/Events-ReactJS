@@ -20,6 +20,7 @@ export default function Header() {
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             {isAuthenticated ? (
               <>
+                <Nav.Link as={Link} to="/events/create">Create event</Nav.Link>
                 <Nav.Link as={Link} to="/logout">Logout</Nav.Link>
                 <span>| Welcome, {username}</span>
               </>
