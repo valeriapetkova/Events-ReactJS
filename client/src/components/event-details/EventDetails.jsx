@@ -7,13 +7,14 @@ import { useNavigate, useParams } from 'react-router-dom';
 import * as eventService from '../../services/eventService';
 import AuthContext from '../../contexts/authContext';
 
+import Participants from '../participants/Participants';
 import styles from './EventDetails.module.css';
 
 export default function EventDetails() {
     const navigate = useNavigate();
     const [event, setEvent] = useState([]);
     const { eventId } = useParams();
-    const { email, userId, isAuthenticated } = useContext(AuthContext);
+    const { userId } = useContext(AuthContext);
 
     useEffect(() => {
         eventService.getOne(eventId)
@@ -24,7 +25,7 @@ export default function EventDetails() {
     }, [eventId]);
 
     const deleteButtonClickHandler = async () => {
-        const confirmation = confirm(`Are you sure you want to delete ${event.title}`);
+        const confirmation = confirm(`Are you sure you want to delete ${event.title}?`);
 
         if(confirmation) {
             try {
@@ -47,17 +48,14 @@ export default function EventDetails() {
                         <Card.Text>{event.eventDate}</Card.Text>
                         <Card.Text>{event.eventTime}</Card.Text>
                         <Card.Text>{event.description}</Card.Text>
-                        <div id="participants">Participants: <span id="participants-count">count</span></div>
+                        
+                        <Participants {...event}/>
 
-                    
                         {userId === event._ownerId && ( 
-                            <>
-                            <div id="participants">Participant emails: <span id="participants-emails">emails</span></div>
                             <div className="buttons">
                                 <Button as={Link} to={`/events/${eventId}/edit`} variant="primary">Edit</Button>
                                 <Button variant="primary" onClick={deleteButtonClickHandler}>Delete</Button>
                             </div>
-                            </>
                         )}
 
                     </Card.Body>
