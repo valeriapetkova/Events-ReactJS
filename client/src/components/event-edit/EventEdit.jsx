@@ -14,7 +14,7 @@ export default function EventEdit() {
         title: '',
         eventDate: '',
         eventTime: '',
-        categiory: '',
+        category: '',
         imageUrl: '',
         description: '',
     });

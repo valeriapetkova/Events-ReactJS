@@ -24,7 +24,7 @@ export default function EventCreate() {
         title: '',
         eventDate: '',
         eventTime: '',
-        categiory: '',
+        category: 'Back-End Development',
         imageUrl: '',
         description: '',
     });
