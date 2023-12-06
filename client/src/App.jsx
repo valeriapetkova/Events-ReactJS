@@ -12,6 +12,7 @@ import EventCreate from './components/event-create/EventCreate';
 import EventDetails from './components/event-details/EventDetails';
 import EventEdit from './components/event-edit/EventEdit';
 import NotFound from './components/not-found/NotFound';
+import AuthGuard from './components/guards/AuthGuard';
 
 function App() {
   return (
@@ -22,13 +23,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<EventList />} />
-          <Route path="/events/create" element={<EventCreate />} />
           <Route path="/events/:eventId" element={<EventDetails />} />
-          <Route path="/events/:eventId/edit" element={<EventEdit />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/logout" element={<Logout />} />
           <Route path="*" element={<NotFound />} />
+
+          <Route element={<AuthGuard />}>
+            <Route path="/events/create" element={<EventCreate />} />
+            <Route path="/events/:eventId/edit" element={<EventEdit />} />
+            <Route path="/logout" element={<Logout />} />
+          </Route>
         </Routes>
       </AuthProvider>
     </>
