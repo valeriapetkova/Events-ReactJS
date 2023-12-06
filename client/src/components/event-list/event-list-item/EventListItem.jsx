@@ -2,6 +2,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
+import styles from './EventListItem.module.css';
+
 export default function EventListItem({
     _id,
     title,
@@ -11,7 +13,7 @@ export default function EventListItem({
     imageUrl,
 }) {
     return (
-        <Card style={{ width: '18rem' }}>
+        <Card style={{ width: '18rem' }} className={styles.eventListItem}>
             <Card.Img variant="top" src={imageUrl} />
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
