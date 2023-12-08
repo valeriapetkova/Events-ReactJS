@@ -4,3 +4,22 @@
     flex-wrap: wrap;
     margin: 20px;
 }
+
+.listHeading {
+    text-align: center;
+    font-size: 30px;
+    font-family: serif;
+    letter-spacing: 8px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 70px;
+    border: 3px solid lightblue;
+    background-color: lightblue;
+    border-radius: 50px;
+    padding: 20px 50px;
+    margin: 50px 20px 20px 30px;
+}
+
+.noArticles {
+    font-size: 30px;
+}

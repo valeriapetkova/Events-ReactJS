@@ -17,16 +17,19 @@ export default function EventList() {
     }, []);
 
     return (
-        <section className={styles.eventList}> 
+        <div className="list-container">
+            <h2 className={styles.listHeading}>All IT events in one place!</h2>
 
-            {events.map(event => (
-                <EventListItem key={event._id} {...event} />
-            ))}
+            <div className={styles.eventList}>
+                {events.map(event => (
+                    <EventListItem key={event._id} {...event} />
+                ))}
 
-            {events.length === 0 && (
-                <h3 className="no-articles">No events yet</h3>
-            )}
+                {events.length === 0 && (
+                    <h3 className={styles.noArticles}>No events yet</h3>
+                )}
+            </div>
 
-        </section> 
+        </div>
     );
 }

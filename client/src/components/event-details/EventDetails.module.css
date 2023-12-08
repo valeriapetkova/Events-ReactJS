@@ -1,6 +1,32 @@
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 20px;
+    background-color: lightblue;
+    height: 100vh;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.cardContainer {
+    width: 90%;
+    align-items: center;
+    align-content: flex-end;
+    font-size: 20px;
+}
+
+.btns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: flex-end;
+}
+
+.dBtn {
+    width: 100%;
+    height: 45px;
+    margin: 10px 5px 5px 5px;
 }

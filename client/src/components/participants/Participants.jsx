@@ -63,7 +63,7 @@ export default function Participants({
                 <div>
                     {!joined ? (
                         <div className={styles.jBtn}>
-                            <Button variant="primary" onClick={joinEventHandler}>Join event</Button>
+                            <Button variant="info" onClick={joinEventHandler}>Join event</Button>
                         </div>
                     )
                         :

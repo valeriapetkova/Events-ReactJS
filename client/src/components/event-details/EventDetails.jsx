@@ -41,20 +41,20 @@ export default function EventDetails() {
     return (
         <>
             <div className={styles.container}>
-                <Card>
+                <Card className={styles.cardContainer}>
                     <Card.Header as="h5">{event.title}</Card.Header>
                     <Card.Body>
                         <Card.Title>Category: {event.category}</Card.Title>
-                        <Card.Text>{event.eventDate}</Card.Text>
-                        <Card.Text>{event.eventTime}</Card.Text>
-                        <Card.Text>{event.description}</Card.Text>
+                        <Card.Text>Date: {event.eventDate}</Card.Text>
+                        <Card.Text>Time: {event.eventTime}</Card.Text>
+                        <Card.Text>Description: {event.description}</Card.Text>
                         
                         <Participants {...event}/>
 
                         {userId === event._ownerId && ( 
-                            <div className="buttons">
-                                <Button as={Link} to={`/events/${eventId}/edit`} variant="primary">Edit</Button>
-                                <Button variant="primary" onClick={deleteButtonClickHandler}>Delete</Button>
+                            <div className={styles.btns}>
+                                <Button as={Link} to={`/events/${eventId}/edit`} variant="info" className={styles.dBtn}>Edit</Button>
+                                <Button variant="info" onClick={deleteButtonClickHandler} className={styles.dBtn}>Delete</Button>
                             </div>
                         )}
 

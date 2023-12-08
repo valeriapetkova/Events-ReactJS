@@ -10,12 +10,11 @@ import styles from './EventEdit.module.css';
 export default function EventEdit() {
     const navigate = useNavigate();
     const { eventId } = useParams();
-    const [ event, setEvent ] = useState({
+    const [event, setEvent] = useState({
         title: '',
         eventDate: '',
         eventTime: '',
         category: '',
-        imageUrl: '',
         description: '',
     });
 
@@ -51,8 +50,9 @@ export default function EventEdit() {
     };
 
     return (
-        <div className="container">
-                <h2 className={styles.heading}>Edit event</h2>
+        <div className={styles.edContainer}>
+            <div className={styles.formEdContainer}>
+                <h2 className={styles.edHeading}>Edit event</h2>
                 <Form onSubmit={editEventSubmitHandler}>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Title</Form.Label>
@@ -82,18 +82,14 @@ export default function EventEdit() {
                         </Form.Control>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="exampleForm.ControlInput5">
-                        <Form.Label>Image</Form.Label>
-                        <Form.Control type="text" placeholder="Add image url" name="imageUrl" onChange={onChange} value={event.imageUrl} />
-                    </Form.Group>
-
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Description</Form.Label>
                         <Form.Control as="textarea" rows={3} name="description" onChange={onChange} value={event.description} />
                     </Form.Group>
 
-                    <Button variant="info" type="submit">Edit</Button>
+                    <Button variant="info" type="submit" className={styles.edBtn}>Edit</Button>
                 </Form>
             </div>
+        </div>
     );
 }
