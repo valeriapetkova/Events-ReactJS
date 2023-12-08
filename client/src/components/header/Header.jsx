@@ -12,11 +12,10 @@ export default function Header() {
     return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand as={Link} to="/">Events Project</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">EventS</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/events">All events</Nav.Link>
             {isAuthenticated ? (
               <>
