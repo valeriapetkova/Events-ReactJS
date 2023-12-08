@@ -14,6 +14,12 @@ export const getOne = async (eventId) => {
     return result;
 };
 
+export const getLatest = async () => {
+    const result = await request.get(`${baseUrl}?sortBy=_createdOn%20desc&offset=0&pageSize=3`);
+
+    return result;
+};
+
 export const create = async (eventData) => {
     const result = await request.post(baseUrl, eventData);
 
