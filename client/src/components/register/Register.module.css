@@ -1,12 +1,40 @@
-.container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 20px;
+.regHeading {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    letter-spacing: 2px;
+    color: lightblue;
+    font-weight: bold;
 }
 
-.heading {
+.regContainer {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+    background-color: lightblue;
+}
+
+.formRegContainer {
+    width: 500px;
+    background-position: center;
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    padding: 0 40px;
+}
+
+.regBtn {
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.regField {
     text-align: center;
-    padding-top: 1%;
-    padding-bottom: 3%;
+    font-size: 16px;
 }

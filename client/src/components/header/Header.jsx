@@ -6,6 +6,7 @@ import { useContext } from 'react';
 
 import AuthContext from '../../contexts/authContext';
 
+import styles from './Header.module.css';
 
 export default function Header() {
   const { isAuthenticated, username } = useContext(AuthContext);
@@ -21,7 +22,7 @@ export default function Header() {
               <>
                 <Nav.Link as={Link} to="/events/create">Create event</Nav.Link>
                 <Nav.Link as={Link} to="/logout">Logout</Nav.Link>
-                <span>| Welcome, {username}</span>
+                <span className={styles.txt}>Welcome, {username}</span>
               </>
             )
               : (

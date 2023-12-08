@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import * as participantService from '../../services/participantService';
 import AuthContext from '../../contexts/authContext';
 
+import styles from './Participants.module.css';
+
 export default function Participants({
     _ownerId
 }) {
@@ -60,25 +62,27 @@ export default function Participants({
             {(isAuthenticated && userId !== _ownerId) && (
                 <div>
                     {!joined ? (
-                        <Button variant="primary" onClick={joinEventHandler}>Join event</Button>
+                        <div className={styles.jBtn}>
+                            <Button variant="primary" onClick={joinEventHandler}>Join event</Button>
+                        </div>
                     )
                         :
                         (
-                            <p>You joined the event! You will receive an email with more information about the event.</p>
+                            <p className={styles.txtField}>You joined the event! You will receive an email with more information about the event.</p>
                         )}
                 </div>
             )}
 
             {(isAuthenticated && userId === _ownerId) && (
                 <>
-                    <div id="participants">Participant emails:
+                    <div className={styles.participantsField}>Participant emails:
                         <span id="participants-emails">
                             {participants.map(participant => (
                                 <p key={participant._id}>{participant.email}</p>
                             ))}
 
                             {participants.length === 0 && (
-                                <p className="no-articles">No participants yet</p>
+                                <p className={styles.noArticles}>No participants yet</p>
                             )}
 
                         </span>

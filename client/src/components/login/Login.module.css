@@ -1,5 +1,40 @@
 .heading {
     text-align: center;
-    padding-top: 1%;
-    padding-bottom: 3%;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    letter-spacing: 2px;
+    color: lightblue;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-end;
+    background-color: lightblue;
+}
+
+.formContainer {
+    width: 500px;
+    background-position: center;
+    background-color: white;
+    border: 3px solid white;
+    border-radius: 30px;
+    margin-bottom: 150px;
+    padding: 0 40px;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.field {
+    text-align: center;
+    font-size: 16px;
 }
