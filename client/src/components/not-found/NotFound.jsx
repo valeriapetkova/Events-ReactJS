@@ -1,3 +1,9 @@
+import styles from './NotFound.module.css';
+
 export default function NotFound() {
-    return <h1>Page not found!</h1>
+    return (
+        <div className={styles.nfField}>
+            <h1 className={styles.notFoundTxt}>Page not found!</h1>
+        </div>
+    );
 }

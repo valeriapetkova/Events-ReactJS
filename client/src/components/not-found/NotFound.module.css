@@ -1,0 +1,19 @@
+.notFoundTxt {
+    font-size: 70px;
+    background-color: lightblue;
+    letter-spacing: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.nfField {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: lightblue;
+}

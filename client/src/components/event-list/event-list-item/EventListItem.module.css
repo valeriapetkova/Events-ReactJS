@@ -5,9 +5,16 @@
     margin: 2px 2px 2px 2px;
     text-align: center;
     align-items: center;
-    align-content: flex-end;
+    align-content: center;
 }
 
 .cardBorder {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px 2px 2px 10px;
+    text-align: center;
+    align-items: center;
+    align-content: flex-end;
     border: 3px solid lightblue;
 }
