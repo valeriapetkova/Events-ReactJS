@@ -56,17 +56,17 @@ export default function EventEdit() {
                 <Form onSubmit={editEventSubmitHandler}>
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                         <Form.Label>Title</Form.Label>
-                        <Form.Control type="text" placeholder="Enter event title" name="title" onChange={onChange} value={event.title} />
+                        <Form.Control type="text" placeholder="Enter event title" name="title" onChange={onChange} value={event.title} required />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
                         <Form.Label>Date</Form.Label>
-                        <Form.Control type="text" placeholder="Date" name="eventDate" onChange={onChange} value={event.eventDate} />
+                        <Form.Control type="text" placeholder="12.11.2023" name="eventDate" onChange={onChange} value={event.eventDate} required />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
                         <Form.Label>Time</Form.Label>
-                        <Form.Control type="text" placeholder="Time" name="eventTime" onChange={onChange} value={event.eventTime} />
+                        <Form.Control type="text" placeholder="10:30" name="eventTime" onChange={onChange} value={event.eventTime} required />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
@@ -84,7 +84,7 @@ export default function EventEdit() {
 
                     <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                         <Form.Label>Description</Form.Label>
-                        <Form.Control as="textarea" rows={3} name="description" onChange={onChange} value={event.description} />
+                        <Form.Control as="textarea" rows={3} name="description" onChange={onChange} value={event.description} required />
                     </Form.Group>
 
                     <Button variant="info" type="submit" className={styles.edBtn}>Edit</Button>

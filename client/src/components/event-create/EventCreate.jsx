@@ -37,17 +37,17 @@ export default function EventCreate() {
                     <Form onSubmit={onSubmit}>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Title</Form.Label>
-                            <Form.Control type="text" placeholder="Enter event title" name="title" onChange={onChange} value={values.title} />
+                            <Form.Control type="text" placeholder="Enter event title" name="title" onChange={onChange} value={values.title} required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
                             <Form.Label>Date</Form.Label>
-                            <Form.Control type="text" placeholder="Date" name="eventDate" onChange={onChange} value={values.eventDate} />
+                            <Form.Control type="text" placeholder="12.11.2023" name="eventDate" onChange={onChange} value={values.eventDate} required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
                             <Form.Label>Time</Form.Label>
-                            <Form.Control type="text" placeholder="Time" name="eventTime" onChange={onChange} value={values.eventTime} />
+                            <Form.Control type="text" placeholder="10:30" name="eventTime" onChange={onChange} value={values.eventTime} required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">
@@ -65,7 +65,7 @@ export default function EventCreate() {
 
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Description</Form.Label>
-                            <Form.Control as="textarea" rows={3} name="description" onChange={onChange} value={values.description} />
+                            <Form.Control as="textarea" rows={3} name="description" onChange={onChange} value={values.description} required />
                         </Form.Group>
 
                         <Button variant="info" type="submit" className={styles.crBtn}>Create</Button>
