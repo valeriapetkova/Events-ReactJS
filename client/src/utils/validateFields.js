@@ -28,8 +28,8 @@ export const formValidate = (name, value) => {
         errors.title = 'Title should be max 30 characters long.';
     }
 
-    if (name === 'description' && value === '') {
-        errors.description = 'Please fill a description';
+    if (name === 'description' && (value.length < 60 || value === '')) {
+        errors.description = 'Description should be at least 60 characters long.';
     }
 
     if (name === 'comment' && value === '') {

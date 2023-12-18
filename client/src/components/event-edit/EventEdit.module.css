@@ -37,3 +37,15 @@
     height: 50px;
     margin-top: 5px;
 }
+
+.errMsg {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: white;
+    color: red;
+}

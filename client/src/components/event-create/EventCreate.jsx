@@ -1,14 +1,25 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 import useForm from '../../hooks/useForm';
 import * as eventService from '../../services/eventService';
+import { formValidate } from '../../utils/validateFields';
 
 import styles from './EventCreate.module.css';
 
 export default function EventCreate() {
     const navigate = useNavigate();
+    const [errors, setErrors] = useState({});
+
+    const validateHandler = (e) => {
+        const value = e.target.value;
+        const name = e.target.name;
+
+        const error = formValidate(name, value);
+        setErrors(error);
+    }
 
     const createEventSubmitHandler = async (values) => {
         try {
@@ -31,13 +42,22 @@ export default function EventCreate() {
 
     return (
         <>
+            <div className={styles.errMsg}>
+                {errors.title && (
+                    <p>{errors.title}</p>
+                )}
+                {errors.description && (
+                    <p>{errors.description}</p>
+                )}
+            </div>
+
             <div className={styles.crContainer}>
                 <div className={styles.formCrContainer}>
                     <h2 className={styles.crHeading}>Create event</h2>
                     <Form onSubmit={onSubmit}>
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                             <Form.Label>Title</Form.Label>
-                            <Form.Control type="text" placeholder="Enter event title" name="title" onChange={onChange} value={values.title} required />
+                            <Form.Control type="text" placeholder="Enter event title" name="title" onChange={onChange} value={values.title} onBlur={validateHandler} required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
@@ -65,7 +85,7 @@ export default function EventCreate() {
 
                         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                             <Form.Label>Description</Form.Label>
-                            <Form.Control as="textarea" rows={3} name="description" onChange={onChange} value={values.description} required />
+                            <Form.Control as="textarea" rows={3} name="description" onChange={onChange} value={values.description} onBlur={validateHandler} required />
                         </Form.Group>
 
                         <Button variant="info" type="submit" className={styles.crBtn}>Create</Button>
