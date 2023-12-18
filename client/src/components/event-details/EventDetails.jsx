@@ -8,13 +8,14 @@ import * as eventService from '../../services/eventService';
 import AuthContext from '../../contexts/authContext';
 
 import Participants from '../participants/Participants';
+import Comments from '../comments/Comments';
 import styles from './EventDetails.module.css';
 
 export default function EventDetails() {
     const navigate = useNavigate();
     const [event, setEvent] = useState([]);
     const { eventId } = useParams();
-    const { userId } = useContext(AuthContext);
+    const { userId, isAuthenticated } = useContext(AuthContext);
 
     useEffect(() => {
         eventService.getOne(eventId)
@@ -56,6 +57,10 @@ export default function EventDetails() {
                                 <Button as={Link} to={`/events/${eventId}/edit`} variant="info" className={styles.dBtn}>Edit</Button>
                                 <Button variant="info" onClick={deleteButtonClickHandler} className={styles.dBtn}>Delete</Button>
                             </div>
+                        )}
+
+                        {isAuthenticated && (
+                            <Comments {...event} />
                         )}
 
                     </Card.Body>

@@ -1,0 +1,83 @@
+.cmContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.cmHeader {
+    text-align: center;
+    font-size: 28px;
+    font-family: serif;
+    color: lightblue;
+    font-weight: bold;
+}
+
+.cmMsg {
+    padding: 0 50px;
+}
+
+.noComments {
+    font-size: 18px;
+}
+
+.cmCards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.cmBtns {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.dCmBtn {
+    background-color: white;
+}
+
+.cmF {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 3px solid lightblue;
+    background-color: lightblue;
+    border-radius: 15px;
+    padding: 4px 7px;
+    margin: 3px 1px 1px 3px;
+    text-align: center;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 8px;
+}
+
+.errMsg {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: white;
+    color: red;
+}
