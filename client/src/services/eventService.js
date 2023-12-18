@@ -20,6 +20,14 @@ export const getLatest = async () => {
     return result;
 };
 
+export const getMyEvents = async (userId) => {
+    const query = `where=_ownerId%3D%22${userId}%22&sortBy=_createdOn%20desc`;
+
+    const result = await request.get(`${baseUrl}?${query}`);
+
+    return result;
+}
+
 export const create = async (eventData) => {
     const result = await request.post(baseUrl, eventData);
 

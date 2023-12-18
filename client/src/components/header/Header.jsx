@@ -21,6 +21,7 @@ export default function Header() {
             {isAuthenticated ? (
               <>
                 <Nav.Link as={Link} to="/events/create">Create event</Nav.Link>
+                <Nav.Link as={Link} to="/profile">Profile</Nav.Link>
                 <Nav.Link as={Link} to="/logout">Logout</Nav.Link>
                 <span className={styles.txt}>Welcome, {username}</span>
               </>

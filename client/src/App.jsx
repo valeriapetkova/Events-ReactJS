@@ -14,6 +14,7 @@ import EventEdit from './components/event-edit/EventEdit';
 import NotFound from './components/not-found/NotFound';
 import AuthGuard from './components/guards/AuthGuard';
 import GuestGuard from './components/guards/GuestGuard';
+import Profile from './components/profile/Profile';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route element={<AuthGuard />}>
             <Route path="/events/create" element={<EventCreate />} />
             <Route path="/events/:eventId/edit" element={<EventEdit />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/logout" element={<Logout />} />
           </Route>
         </Routes>
