@@ -62,12 +62,12 @@ export default function EventCreate() {
 
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
                             <Form.Label>Date</Form.Label>
-                            <Form.Control type="text" placeholder="12.11.2023" name="eventDate" onChange={onChange} value={values.eventDate} required />
+                            <Form.Control type="date" placeholder="Date" name="eventDate" onChange={onChange} value={values.eventDate} required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
                             <Form.Label>Time</Form.Label>
-                            <Form.Control type="text" placeholder="10:30" name="eventTime" onChange={onChange} value={values.eventTime} required />
+                            <Form.Control type="time" placeholder="Time" name="eventTime" onChange={onChange} value={values.eventTime} required />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="exampleForm.ControlInput4">

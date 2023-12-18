@@ -1485,7 +1485,7 @@
     		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
     			title: "Web design",
-                eventDate: "12.12.2023",
+                eventDate: "2023-12-12",
                 eventTime: "12:30",
                 category: "Front-End Development",
     			description: "The main topics are related to HTML tags, CSS styling, rules and selectors.",
@@ -1495,7 +1495,7 @@
     		"143e5265-333e-4150-80e4-16b61de31aa0": {
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
     			title: "What is Back-End?",
-                eventDate: "13.12.2023",
+                eventDate: "2023-12-11",
                 eventTime: "10:30",
                 category: "Back-End Development",
     			description: "The main topics are related to server, databases and programming languages for Back-End development.",
@@ -1505,7 +1505,7 @@
     		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
     			title: "QA Introduction",
-                eventDate: "14.12.2023",
+                eventDate: "2023-12-10",
                 eventTime: "11:30",
                 category: "Quality Assurance",
     			description: "The main topics are related to good software testing practices, test scenarios and test cases, automated testing.",
